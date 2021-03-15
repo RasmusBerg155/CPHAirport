@@ -1,10 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Index</title>
 </head>
 <body>
-    Initial Html
+This is the index.
+<h1>Ankomster</h1>
+<table>
+    <tr>
+        <th>Tid</th>
+        <th>Sted</th>
+        <th>Gate</th>
+        <th>Forsinkelse</th>
+    </tr>
+    <tr th:each=" : ${}">
+        <td th:text="${}"></td>
+        <td th:text="${}"></td>
+        <td th:text="${}"></td>
+        <td th:text="${}"></td>
+        <td>
+            <a th:href="@{'/loan/' + ${}}">
+                <button class="button">Loan</button>
+            </a>
+            <a th:href="@{'/return/' + ${}}">
+                <button class="button">Return</button>
+            </a>
+        </td>
+    </tr>
+</table>
 </body>
 </html>
