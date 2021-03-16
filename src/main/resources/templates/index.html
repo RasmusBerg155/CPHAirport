@@ -1,10 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="main_style.css"/>
+    <title>Index</title>
 </head>
 <body>
-    Initial Html
+
+<table class="flighttable">
+    <h1>Ankomster</h1>
+    <tr>
+        <th>Tid</th>
+        <th>Fra</th>
+        <th>Selskab</th>
+        <th>Fly</th>
+        <th>Gate</th>
+        <th>Forsinkelse</th>
+    </tr>
+
+    <!--
+
+    <tr th:each=" : ${}">
+        <td th:text="${}"></td>
+        <td th:text="${}"></td>
+        <td th:text="${}"></td>
+        <td th:text="${}"></td>
+        <td th:text="${}"></td>
+        <td th:text="${}"></td>
+    </tr>
+</table>
+
+-->
+
+
+    <table class="flighttable">
+        <h1>Afgange</h1>
+        <tr>
+            <th>Tid</th>
+            <th>Til</th>
+            <th>Selskab</th>
+            <th>Fly</th>
+            <th>Gate</th>
+            <th>Forsinkelse</th>
+        </tr>
+
+        <!--
+
+        <tr th:each=" : ${}">
+            <td th:text="${}"></td>
+            <td th:text="${}"></td>
+            <td th:text="${}"></td>
+            <td th:text="${}"></td>
+            <td th:text="${}"></td>
+            <td th:text="${}"></td>
+        </tr>
+
+        -->
+
+    </table>
 </body>
 </html>
