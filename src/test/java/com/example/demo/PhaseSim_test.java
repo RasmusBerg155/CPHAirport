@@ -23,8 +23,22 @@ public class PhaseSim_test {
     void getTotalTime() {
         // insert boolean for switching off randomness for tests
         Task tree = treeFactory.create(5, 15, 15,15, 5, 25);
-        int cost = phaseSimService.eval(tree);
+        int cost = phaseSimService.phaseBoth(tree);
         assertEquals(35, cost);
+    }
+
+    @Test
+    void getTimePhaseOne(){
+        Task tree = treeFactory.create(5, 15, 15,15, 5, 25);
+        int cost = phaseSimService.phaseOne(tree);
+        assertEquals(20, cost);
+    }
+
+    @Test
+    void getTimePhaseOTwo(){
+        Task tree = treeFactory.create(5, 15, 15,15, 5, 25);
+        int cost = phaseSimService.phaseTwo(tree);
+        assertEquals(25, cost);
     }
 
 }
