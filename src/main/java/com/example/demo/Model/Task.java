@@ -8,16 +8,15 @@ public class Task {
     String name;
     ArrayList<Task> children;
 
-    public Task(int time, String name, ArrayList<Task> children) {
+    public Task(int time, String name) {
         this.time = time;
         this.name = name;
-        this.children = children;
+        this.children = new ArrayList<>();
     }
 
     public void addChild(Task task){
         children.add(task);
     }
-
 
     public int getTime() {
         return time;

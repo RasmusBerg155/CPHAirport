@@ -1,29 +1,30 @@
 package com.example.demo;
 
-import org.junit.jupiter.api.BeforeAll;
+import com.example.demo.Factory.TreeFactory;
+import com.example.demo.Model.Task;
+import com.example.demo.Service.PhaseSimService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-
-import java.util.Random;
-
 public class PhaseSim_test {
 
-    private PhaseSim phaseSim;
+    private PhaseSimService phaseSimService;
+    private TreeFactory treeFactory;
 
     @BeforeEach
     void setup() {
-        phaseSim = new PhaseSim();
+        phaseSimService = new PhaseSimService();
+        treeFactory = new TreeFactory();
     }
 
     @Test
-    void generateSmall() {
+    void getTotalTime() {
         // insert boolean for switching off randomness for tests
-        Task tree = phaseSim.small(false);
-        int cost = phaseSim.eval(tree);
-        assertEquals(50, cost);
+        Task tree = treeFactory.create(5, 15, 15,15, 5, 25);
+        int cost = phaseSimService.eval(tree);
+        assertEquals(35, cost);
     }
 
 }
