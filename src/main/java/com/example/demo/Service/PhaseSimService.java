@@ -13,7 +13,6 @@ public class PhaseSimService {
         int treeRight;
         int totalTime;
 
-
         treeLeft = tree.getChildren().get(0).getTime();
 
         if (tree.getChildren().get(0).getChildren().get(0).getTime() >= tree.getChildren().get(0).getChildren().get(1).getTime()) {
