@@ -11,11 +11,12 @@
     </div>
 
     <div class="navbar">
-        <p>Jobs
-        <a href="#">V Dropdown</a>
-        <a href="#">Prev</a>
-        <a href="#">Next</a>
-        </p>
+        <select id="jobsComboBox" class="classJobsComboBox" th:field="*{shift}">
+            <option value="">Select Job</option>
+            <option th:each="job : ${jobs}" th:value="${job}" th:text="${job.text}"></option>
+        </select>
+        <button>Next</button>
+        <button>Prev</button>
     </div>
 
     <table>
