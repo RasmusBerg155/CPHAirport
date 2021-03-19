@@ -10,4 +10,14 @@ public class HomeController {
     public String index(){
         return "index";
     }
+
+    @GetMapping("/work_group")
+    public String workGroup(){
+        return "work_group";
+    }
+
+    @GetMapping("/admin_group")
+    public String adminGroup(){
+        return "admin_group";
+    }
 }
