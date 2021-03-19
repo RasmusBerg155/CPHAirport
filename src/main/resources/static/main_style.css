@@ -4,16 +4,24 @@
 }
 
 .header{
-    padding: 25px;
-    text-align: left;
-    background: darkcyan;
-    color: white;
+    overflow: hidden;
+    background-color: lightblue;
 }
 
-.header h1{
-    font-size: 35px;
+.header a{
+    float: left;
+    color: darkcyan;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.header a.logo{
+    font-size: 25px;
+    font-weight: bold;
+    width: 150px;
 }
 
 .navbar {
-    padding: 15px;
+    padding: 25px;
 }
+
