@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <title>Admin Group</title>
+    <title>Title</title>
 </head>
-<th:block th:include="/includes/header :: header"></th:block>
 <body>
-<h1>Yo</h1>
+    <div th:fragment="header" class="header">
+        <a href="/">
+            <img src="/images/cph-airport.jpeg" alt="Cph Logo">
+        </a>
+        <div class="header-right">
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
 </body>
 </html>
