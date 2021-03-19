@@ -16,6 +16,7 @@ public class PhaseSimService {
 
     Random r = new Random();
 
+
     int treeLeft;
     int treeRight;
     int totalTime;
@@ -74,16 +75,15 @@ public class PhaseSimService {
         return totalTime;
     }
 
-    public int smallAircraft() {
-        return phaseBoth(treeFactory.groundStaffTask(r.nextInt(10), r.nextInt(15) + 5, r.nextInt(35) + 5, r.nextInt(20) + 10, r.nextInt(15) + 5, r.nextInt(20) + 10));
+    public TaskModel smallAircraft() {
+        return treeFactory.groundStaffTask(r.nextInt(10), r.nextInt(15) + 5, r.nextInt(35) + 5, r.nextInt(20) + 10, r.nextInt(15) + 5, r.nextInt(20) + 10);
     }
 
-    public int mediumAircraft() {
-        return phaseBoth(treeFactory.groundStaffTask(r.nextInt(15) + 5, r.nextInt(25) + 15, r.nextInt(45) + 5, r.nextInt(25) + 15, r.nextInt(20) + 10, r.nextInt(30) + 20));
+    public TaskModel mediumAircraft() {
+        return treeFactory.groundStaffTask(r.nextInt(15) + 5, r.nextInt(25) + 15, r.nextInt(45) + 5, r.nextInt(25) + 15, r.nextInt(20) + 10, r.nextInt(30) + 20);
     }
 
-    public int largeAircraft() {
-        return phaseBoth(treeFactory.groundStaffTask(r.nextInt(20), r.nextInt(35) + 25, r.nextInt(65) + 5, r.nextInt(40) + 30, r.nextInt(25) + 15, r.nextInt(40) + 30));
+    public TaskModel largeAircraft() {
+        return treeFactory.groundStaffTask(r.nextInt(20), r.nextInt(35) + 25, r.nextInt(65) + 5, r.nextInt(40) + 30, r.nextInt(25) + 15, r.nextInt(40) + 30);
     }
-
 }

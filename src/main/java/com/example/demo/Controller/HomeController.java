@@ -1,5 +1,6 @@
 package com.example.demo.Controller;
 
+import com.example.demo.Model.TaskModel;
 import com.example.demo.Service.PhaseSimService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -30,9 +31,19 @@ public class HomeController {
 
     @GetMapping("/test_output")
     public String testOutput(Model model){
-        model.addAttribute("smallTime", phaseSimService.smallAircraft());
-        model.addAttribute("mediumTime", phaseSimService.mediumAircraft());
-        model.addAttribute("largeTime", phaseSimService.largeAircraft());
+        TaskModel smallPlan = phaseSimService.smallAircraft();
+        TaskModel mediumPlan = phaseSimService.mediumAircraft();
+        TaskModel largePlan = phaseSimService.largeAircraft();
+
+        model.addAttribute("smallPlan", smallPlan);
+        model.addAttribute("totalSmall", phaseSimService.phaseBoth(smallPlan));
+
+        model.addAttribute("mediumPlan", mediumPlan);
+        model.addAttribute("totalMedium", phaseSimService.phaseBoth(mediumPlan));
+
+        model.addAttribute("largePlan", largePlan);
+        model.addAttribute("totalLarge", phaseSimService.phaseBoth(largePlan));
+
         return "test_output";
     }
 }

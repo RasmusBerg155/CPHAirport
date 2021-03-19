@@ -2,14 +2,128 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="main_style.css">
     <title>Test</title>
 </head>
-<body>
+<body >
 
-<td th:text="${smallTime}"></td>
-<td th:text="${mediumTime}"></td>
-<td th:text="${largeTime}"></td>
+<h1>Small Aircraft</h1>
+<table style="width: 100%">
+<thead>
+<tr>
+    <th>Passengers Offboarding</th>
 
+    <th>Bagage Out</th>
+
+    <th>Refuel</th>
+
+    <th>Cleaning</th>
+
+    <th>Passengers Boarding</th>
+
+    <th>Bagage In</th>
+
+    <th>Total</th>
+</tr>
+</thead>
+<tbody style="text-align: center">
+<tr>
+    <td th:text="${smallPlan.getChildren().get(0).getTime()}">min.</td>
+
+    <td th:text="${smallPlan.getChildren().get(1).getTime()}"></td>
+
+    <td th:text="${smallPlan.getChildren().get(0).getChildren().get(0).getTime()}"></td>
+
+    <td th:text="${smallPlan.getChildren().get(0).getChildren().get(1).getTime()}"></td>
+
+    <td th:text="${smallPlan.getChildren().get(0).getChildren().get(0).getChildren().get(0).getTime()}"></td>
+
+    <td th:text="${smallPlan.getChildren().get(1).getChildren().get(0).getTime()}"></td>
+
+    <td th:text="${totalSmall}"></td>
+</tr>
+</tbody>
+</table>
+
+<h1>Medium Aircraft</h1>
+<table style="width: 100%">
+    <thead>
+    <tr>
+        <th>Passengers Offboarding</th>
+
+        <th>Bagage Out</th>
+
+        <th>Refuel</th>
+
+        <th>Cleaning</th>
+
+        <th>Passengers Boarding</th>
+
+        <th>Bagage In</th>
+
+        <th>Total</th>
+    </tr>
+    </thead>
+    <tbody style="text-align: center">
+    <tr>
+        <td th:text="${mediumPlan.getChildren().get(0).getTime()}">min.</td>
+
+        <td th:text="${mediumPlan.getChildren().get(1).getTime()}"></td>
+
+        <td th:text="${mediumPlan.getChildren().get(0).getChildren().get(0).getTime()}"></td>
+
+        <td th:text="${mediumPlan.getChildren().get(0).getChildren().get(1).getTime()}"></td>
+
+        <td th:text="${mediumPlan.getChildren().get(0).getChildren().get(0).getChildren().get(0).getTime()}"></td>
+
+        <td th:text="${mediumPlan.getChildren().get(1).getChildren().get(0).getTime()}"></td>
+
+        <td th:text="${totalMedium}"></td>
+    </tr>
+    </tbody>
+</table>
+
+<h1>Large Aircraft</h1>
+<table style="width: 100%">
+    <thead>
+    <tr>
+        <th>Passengers Offboarding</th>
+
+        <th>Bagage Out</th>
+
+        <th>Refuel</th>
+
+        <th>Cleaning</th>
+
+        <th>Passengers Boarding</th>
+
+        <th>Bagage In</th>
+
+        <th>Total</th>
+    </tr>
+    </thead>
+    <tbody style="text-align: center">
+    <tr>
+        <td th:text="${largePlan.getChildren().get(0).getTime()}">min.</td>
+
+        <td th:text="${largePlan.getChildren().get(1).getTime()}"></td>
+
+        <td th:text="${largePlan.getChildren().get(0).getChildren().get(0).getTime()}"></td>
+
+        <td th:text="${largePlan.getChildren().get(0).getChildren().get(1).getTime()}"></td>
+
+        <td th:text="${largePlan.getChildren().get(0).getChildren().get(0).getChildren().get(0).getTime()}"></td>
+
+        <td th:text="${largePlan.getChildren().get(1).getChildren().get(0).getTime()}"></td>
+
+        <td th:text="${totalLarge}"></td>
+    </tr>
+    </tbody>
+</table>
+
+<FORM>
+    <INPUT TYPE="button" onClick="history.go(0)" VALUE="Generate New Simulation">
+</FORM>
 
 </body>
 </html>

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class TreeFactory {
 
-    public TaskModel groundStaffTask(int pOutTime, int refuelTime, int cleaningTime, int pInTime, int bOutTime, int bInTime){
+    public TaskModel groundStaffTask(int pOutTime, int refuelTime, int cleaningTime, int pInTime, int bOutTime, int bInTime) {
 
         TaskModel root = new TaskModel(0, "root");
         TaskModel passangersOut = new TaskModel(pOutTime, "passagengers out");
@@ -22,13 +22,10 @@ public class TreeFactory {
         passangersOut.addChild(refuel);
         passangersOut.addChild(cleaning);
 
-        if(refuel.getTime() >= cleaning.getTime()){
-            refuel.addChild(passengersIn);
-        } else {
-            cleaning.addChild(passengersIn);
-        }
+        refuel.addChild(passengersIn);
+        cleaning.addChild(passengersIn);
 
         return root;
 
-            }
+    }
 }
