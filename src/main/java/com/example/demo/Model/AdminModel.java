@@ -1,8 +1,8 @@
 package com.example.demo.Model;
 
-public class Administrative {
+public class AdminModel extends EmployeeModel {
 
-    public Administrative() {
+    public AdminModel() {
 
     }
 

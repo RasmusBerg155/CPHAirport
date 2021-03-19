@@ -2,20 +2,20 @@ package com.example.demo.Model;
 
 import java.util.ArrayList;
 
-public class Task {
+public class TaskModel {
 
     int time;
     String name;
-    ArrayList<Task> children;
+    ArrayList<TaskModel> children;
 
-    public Task(int time, String name) {
+    public TaskModel(int time, String name) {
         this.time = time;
         this.name = name;
         this.children = new ArrayList<>();
     }
 
-    public void addChild(Task task){
-        children.add(task);
+    public void addChild(TaskModel taskModel){
+        children.add(taskModel);
     }
 
     public int getTime() {
@@ -34,11 +34,11 @@ public class Task {
         this.name = name;
     }
 
-    public ArrayList<Task> getChildren() {
+    public ArrayList<TaskModel> getChildren() {
         return children;
     }
 
-    public void setChildren(ArrayList<Task> children) {
+    public void setChildren(ArrayList<TaskModel> children) {
         this.children = children;
     }
 }

@@ -1,11 +1,11 @@
 package com.example.demo.Model;
 
-public class Working {
+public class WorkingModel extends EmployeeModel {
 
     int workingTime;
     int walkingTime;
 
-    public Working() {
+    public WorkingModel() {
 
     }
 

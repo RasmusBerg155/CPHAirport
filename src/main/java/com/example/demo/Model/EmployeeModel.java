@@ -1,13 +1,13 @@
 package com.example.demo.Model;
 
-public class Employee {
+public class EmployeeModel {
 
     int id;
     String name;
     String lastName;
     String role;
 
-    public Employee() {
+    public EmployeeModel() {
 
     }
 

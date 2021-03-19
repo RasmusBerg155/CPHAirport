@@ -1,8 +1,8 @@
 package com.example.demo.Model;
 
-public class Finger {
+public class FingerModel {
 
-    public Finger() {
+    public FingerModel() {
 
     }
     int fingerId;

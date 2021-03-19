@@ -1,22 +1,20 @@
 package com.example.demo.Factory;
 
-import com.example.demo.Model.Task;
+import com.example.demo.Model.TaskModel;
+import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
-
+@Component
 public class TreeFactory {
 
+    public TaskModel groundStaffTask(int pOutTime, int refuelTime, int cleaningTime, int pInTime, int bOutTime, int bInTime){
 
-
-    public Task create(int pOutTime, int refuelTime, int cleaningTime, int pInTime, int bOutTime, int bInTime){
-
-        Task root = new Task(0, "root");
-        Task passangersOut = new Task(pOutTime, "passagengers out");
-        Task refuel = new Task(refuelTime, "refuel");
-        Task cleaning = new Task(cleaningTime, "cleaning");
-        Task passengersIn = new Task(pInTime, "passengers in");
-        Task bagageOut = new Task(bOutTime, "bagage out");
-        Task bagageIn = new Task(bInTime, "bagage in");
+        TaskModel root = new TaskModel(0, "root");
+        TaskModel passangersOut = new TaskModel(pOutTime, "passagengers out");
+        TaskModel refuel = new TaskModel(refuelTime, "refuel");
+        TaskModel cleaning = new TaskModel(cleaningTime, "cleaning");
+        TaskModel passengersIn = new TaskModel(pInTime, "passengers in");
+        TaskModel bagageOut = new TaskModel(bOutTime, "bagage out");
+        TaskModel bagageIn = new TaskModel(bInTime, "bagage in");
 
         root.addChild(passangersOut);
         root.addChild(bagageOut);
